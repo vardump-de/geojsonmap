@@ -1,0 +1,40 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * geojsonmap plugin for Craft CMS 3.x
+ *
+ * GeojsonmapField Field Input
+ *
+ * @author    Andi Grether
+ * @copyright Copyright (c) 2019 Andi Grether
+ * @link      https://webworker.me/
+ * @package   Geojsonmap
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerJsFile('https://unpkg.com/leaflet@1.4.0/dist/leaflet.js') %}
+{% do view.registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js') %}
+{% do view.registerJsFile('https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js') %}
+{% do view.registerCssFile('https://unpkg.com/leaflet@1.4.0/dist/leaflet.css') %}
+{% do view.registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css') %}
+{% do view.registerCssFile('https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css') %}
+
+<div class="geojsonmap">
+    <div id="{{ id }}-map" class="{{ id }}__map"></div>
+    <div id="{{ id }}-tools" class="{{ id }}__tools btngroup" data-state="false">
+        <a href="" id="{{ id }}-download" class="btn {{ id }}__tools-download">{{ "Download Geojson"|t("geojsonmap") }}</a>
+        <a href="" id="{{ id }}-toggle" class="btn {{ id }}__tools-toggle" data-state="false" data-open="{{ "Hide Geojson"|t("geojsonmap") }}"
+           data-close="{{ "Show Geojson"|t("geojsonmap") }}"></a>
+    </div>
+    {#{{ d(field.mapcenterLat) }}#}
+    <div id="{{ id }}-input-wrapper" aria-expanded="false" class="{{ id }}__input">
+        {{ forms.textareaField({
+            id: name,
+            name: name,
+            value: value}) }}
+    </div>
+
+</div>

@@ -1,0 +1,54 @@
+/**
+ * geojsonmap plugin for Craft CMS
+ *
+ * GeojsonmapField Field CSS
+ *
+ * @author    Andi Grether
+ * @copyright Copyright (c) 2019 Andi Grether
+ * @link      https://webworker.me/
+ * @package   Geojsonmap
+ * @since     1.0.0
+ */
+
+.geojson {
+}
+
+.geojson__map {
+    min-height: 100px;
+    max-height: 1000px;
+}
+
+.geojson__tools[data-state='false'] {
+    display: none;
+    margin-top: 24px;
+}
+
+.geojson__tools[data-state='true'] {
+    display: block;
+    margin-top: 24px;
+}
+
+.geojson__tools-toggle[data-state='false']:after {
+    content: attr(data-close);
+}
+
+.geojson__tools-toggle[data-state='true']:after {
+    content: attr(data-open);
+}
+
+.geojson__input {
+    margin-top: 24px;
+}
+
+.geojson__input[aria-expanded='false'] {
+    display: none;
+}
+
+.geojson__input[aria-expanded='true'] {
+    display: block;
+}
+
+
+textarea#fields-geojson {
+    height: 400px;
+}

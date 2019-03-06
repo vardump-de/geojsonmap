@@ -1,0 +1,42 @@
+{
+  "name": "vardump/geojsonmap",
+  "description": "A craft cms 3 field plugin to draw Leaflet Maps.",
+  "type": "craft-plugin",
+  "version": "1.0.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "geojsonmap",
+    "field",
+    "leaflet"
+  ],
+  "support": {
+    "docs": "https://github.com/vardump-de/geojsonmap/blob/master/README.md",
+    "issues": "https://github.com/vardump-de/geojsonmap/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andi Grether",
+      "homepage": "https://vardump.de"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.0.0-RC1"
+  },
+  "autoload": {
+    "psr-4": {
+      "vardump\\geojsonmap\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "geojsonmap",
+    "handle": "geojsonmap",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "changelogUrl": "https://raw.githubusercontent.com/vardump-de/geojsonmap/master/CHANGELOG.md",
+    "class": "vardump\\geojsonmap\\Geojsonmap"
+  }
+}

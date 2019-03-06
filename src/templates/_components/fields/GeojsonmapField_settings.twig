@@ -1,0 +1,56 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * geojsonmap plugin for Craft CMS
+ *
+ * GeojsonmapField Field Settings
+ *
+ * @author    Andi Grether
+ * @copyright Copyright (c) 2019 Andi Grether
+ * @link      https://webworker.me/
+ * @package   Geojsonmap
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("vardump\\geojsonmap\\assetbundles\\geojsonmap\\GeojsonmapAsset") %}
+
+{{ forms.textField({
+    label: "Map Center Latitude"|t("geojsonmap"),
+    id: 'mapcenterLatitude',
+    name: 'mapcenterLatitude',
+    value: field['mapcenterLatitude'],
+    required: true,
+    errors: field.getErrors('mapcenterLatitude')
+}) }}
+
+{{ forms.textField({
+    label: "Map Center Longitude"|t("geojsonmap"),
+    id: 'mapcenterLongitude',
+    name: 'mapcenterLongitude',
+    value: field['mapcenterLongitude'],
+    required: true,
+    errors: field.getErrors('mapcenterLongitude')
+}) }}
+
+{{ forms.textField({
+    label: "Map Height"|t("geojsonmap"),
+    instructions: "Map height in pixels"|t('geojsonmap'),
+    id: 'mapheight',
+    name: 'mapheight',
+    value: field['mapheight'],
+    required: true,
+    errors: field.getErrors('mapheight')
+}) }}
+
+{{ forms.textField({
+    label: "Map Zoom"|t("geojsonmap"),
+    id: 'mapzoom',
+    name: 'mapzoom',
+    value: field['mapzoom'],
+    required: true,
+    errors: field.getErrors('mapzoom')
+}) }}
+
