@@ -10,45 +10,45 @@
  * @since     1.0.0
  */
 
-.jsonmap {
+.geojson {
 }
 
-.jsonmap__map {
+.geojson__map {
     min-height: 100px;
     max-height: 1000px;
 }
 
-.jsonmap__tools[data-state='false'] {
+.geojson__tools[data-state='false'] {
     display: none;
     margin-top: 24px;
 }
 
-.jsonmap__tools[data-state='true'] {
+.geojson__tools[data-state='true'] {
     display: block;
     margin-top: 24px;
 }
 
-.jsonmap__tools-toggle[data-state='false']:after {
+.geojson__tools-toggle[data-state='false']:after {
     content: attr(data-close);
 }
 
-.jsonmap__tools-toggle[data-state='true']:after {
+.geojson__tools-toggle[data-state='true']:after {
     content: attr(data-open);
 }
 
-.jsonmap__input {
+.geojson__input {
     margin-top: 24px;
 }
 
-.jsonmap__input[aria-expanded='false'] {
+.geojson__input[aria-expanded='false'] {
     display: none;
 }
 
-.jsonmap__input[aria-expanded='true'] {
+.geojson__input[aria-expanded='true'] {
     display: block;
 }
 
 
-textarea#fields-jsonmap {
+textarea#fields-geojson {
     height: 400px;
 }

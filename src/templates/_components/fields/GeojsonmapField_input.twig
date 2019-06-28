@@ -23,14 +23,14 @@
 {% do view.registerCssFile('https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css') %}
 
 <div class="geojsonmap">
-    <div id="{{ id }}-map" class="{{ id }}__map" style='z-index:0;'></div>
-    <div id="{{ id }}-tools" class="{{ id }}__tools btngroup" data-state="false">
-        <a href="" id="{{ id }}-download" class="btn {{ id }}__tools-download">{{ "Download Geojson"|t("geojsonmap") }}</a>
-        <a href="" id="{{ id }}-toggle" class="btn {{ id }}__tools-toggle" data-state="false" data-open="{{ "Hide Geojson"|t("geojsonmap") }}"
+    <div id="{{ id }}-map" class="geojson__map" style='z-index:0;'></div>
+    <div id="{{ id }}-tools" class="geojson__tools btngroup" data-state="false">
+        <a href="" id="{{ id }}-download" class="btn geojson__tools-download">{{ "Download Geojson"|t("geojsonmap") }}</a>
+        <a href="" id="{{ id }}-toggle" class="btn geojson__tools-toggle" data-state="false" data-open="{{ "Hide Geojson"|t("geojsonmap") }}"
            data-close="{{ "Show Geojson"|t("geojsonmap") }}"></a>
     </div>
     {#{{ d(field.mapcenterLat) }}#}
-    <div id="{{ id }}-input-wrapper" aria-expanded="false" class="{{ id }}__input">
+    <div id="{{ id }}-input-wrapper" aria-expanded="false" class="geojson__input">
         {{ forms.textareaField({
             id: name,
             name: name,
