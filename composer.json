@@ -2,7 +2,7 @@
   "name": "vardump/geojsonmap",
   "description": "A craft cms 3 field plugin to draw Leaflet Maps.",
   "type": "craft-plugin",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "keywords": [
     "craft",
     "cms",
