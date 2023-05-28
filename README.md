@@ -1,12 +1,13 @@
-# geojsonmap plugin for Craft CMS 3.x
+# geojsonmap plugin for Craft CMS 3.x / 4.x
 
-A craft cms 3 field plugin to draw Leaflet Maps.
+A craft cms 3 / 4 field plugin to draw Leaflet Maps.
 
 ![Screenshot](resources/img/screenshot.png)
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+For Craft 3 please use version `^1.0`
+For Craft 4 please use version `^2.0`
 
 ## Installation
 
